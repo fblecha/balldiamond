@@ -1,5 +1,5 @@
 # balldiamond
-playing around with getting a baseball diamond to render correctly using CSS
+playing around with getting a baseball diamond to render correctly using CSS.  Heavily inspired by [this article by Chen Hui Jing](http://www.chenhuijing.com/blog/diamond-grid-using-sass/)
 
 ## To run it
 ```shell
