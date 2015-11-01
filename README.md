@@ -5,3 +5,7 @@ playing around with getting a baseball diamond to render correctly using CSS
 ```shell
 $ grunt serve
 ```
+
+## What's it look like?
+
+![baseball diamond](/balldiamond.png)
