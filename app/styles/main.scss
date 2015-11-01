@@ -1,0 +1,253 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+
+@mixin cf {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+@mixin center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+@function sqrt($r) {
+    $x0: 1;
+    $x1: $x0;
+    @for $i from 1 through 10 {
+        $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+        $x0: $x1;
+    }
+    @return $x1;
+}
+body {
+  font-family: 'Roboto Slab';
+  font-size: 82.5%;
+}
+//
+$gridUnit: (100vw / 8);  
+$transformUnit: $gridUnit / sqrt(2);
+$small: $transformUnit * 2;
+$med: $transformUnit * 3;
+$large: $transformUnit * 4;
+
+.grid-wrapper {
+  @include cf;
+  @include center;
+  position: relative;
+  height: $gridUnit * 6;
+  width: $gridUnit * 8;
+}
+.grid-item {
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+}
+.diamond-small {
+  background: limegreen;
+  box-shadow: inset 0px 0px 15px 5px rgba(0,0,0,0.7);
+  height: $small;
+  width: $small;
+  .diamond__content {
+    height: $small;
+    width: $small;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .diamond__img {
+    width: $gridUnit * 2;
+    -webkit-transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
+      -ms-transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
+        transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
+          }
+}
+.diamond-med {
+  background: orange;
+  box-shadow: inset 0px 0px 15px 5px rgba(0,0,0,0.7);
+  height: $med;
+  width: $med;
+  .diamond__content {
+    height: $med;
+    width: $med;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .diamond__img {
+    width: $gridUnit * 3;
+    -webkit-transform: rotate(-45deg) translateY(-$gridUnit * 0.6);
+      -ms-transform: rotate(-45deg) translateY(-$gridUnit * 0.6);
+        transform: rotate(-45deg) translateY(-$gridUnit * 0.6);
+          }
+}
+.diamond-large {
+  background: yellow;
+  height: $large;
+  width: $large;
+  .diamond__content {
+    height: $large;
+    width: $large;display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .diamond__img {
+    width: $gridUnit * 4;
+    -webkit-transform: rotate(-45deg) translateY(-$gridUnit * 0.85);
+      -ms-transform: rotate(-45deg) translateY(-$gridUnit * 0.85);
+        transform: rotate(-45deg) translateY(-$gridUnit * 0.85);
+          }
+}
+.layout-1 {
+  .diamond-s1 {
+    top: $gridUnit;
+    left: $gridUnit * 2;
+  }
+  .diamond-m1 {
+    top: $gridUnit * 3;
+    left: $gridUnit * 2;
+  }
+  .diamond-s2 {
+    top: $gridUnit * 3;
+    left: $gridUnit * 6;
+  }
+  .diamond-m2 {
+    top: 0;
+    left: $gridUnit * 6;
+  }
+  .diamond-l1 {
+    top: $gridUnit;
+    left: $gridUnit * 4;
+  }
+}
+.layout-2 {
+  .diamond-s1 {
+    top: $gridUnit;
+    left: $gridUnit * 6;
+  }
+  .diamond-s2 {
+    top: $gridUnit * 3;
+    left: $gridUnit * 2;
+  }
+  .diamond-m1 {
+    top: 0;
+    left: $gridUnit * 2;
+  }
+  .diamond-m2 {
+    top: $gridUnit * 3;
+    left: $gridUnit * 6;
+  }
+  .diamond-l1 {
+    top: $gridUnit;
+    left: $gridUnit * 4;
+  }
+}
