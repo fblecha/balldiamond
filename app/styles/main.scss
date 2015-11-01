@@ -121,9 +121,9 @@ body {
   font-size: 82.5%;
 }
 //
-$gridUnit: (100vw / 8);  
+$gridUnit: (100vw / 16);
 $transformUnit: $gridUnit / sqrt(2);
-$small: $transformUnit * 2;
+$small: $transformUnit * 1;
 $med: $transformUnit * 3;
 $large: $transformUnit * 4;
 
@@ -144,7 +144,7 @@ $large: $transformUnit * 4;
             transform-origin: 0% 0%;
 }
 .diamond-small {
-  background: limegreen;
+  background: white;
   box-shadow: inset 0px 0px 15px 5px rgba(0,0,0,0.7);
   height: $small;
   width: $small;
@@ -165,30 +165,8 @@ $large: $transformUnit * 4;
         transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
           }
 }
-.diamond-med {
-  background: orange;
-  box-shadow: inset 0px 0px 15px 5px rgba(0,0,0,0.7);
-  height: $med;
-  width: $med;
-  .diamond__content {
-    height: $med;
-    width: $med;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  .diamond__img {
-    width: $gridUnit * 3;
-    -webkit-transform: rotate(-45deg) translateY(-$gridUnit * 0.6);
-      -ms-transform: rotate(-45deg) translateY(-$gridUnit * 0.6);
-        transform: rotate(-45deg) translateY(-$gridUnit * 0.6);
-          }
-}
 .diamond-large {
-  background: yellow;
+  background: green;
   height: $large;
   width: $large;
   .diamond__content {
@@ -208,41 +186,25 @@ $large: $transformUnit * 4;
           }
 }
 .layout-1 {
-  .diamond-s1 {
-    top: $gridUnit;
-    left: $gridUnit * 2;
+  .diamond-first {
+    top: $gridUnit * 2.5;           //X
+    left: $gridUnit * 5.5;      //2X
   }
-  .diamond-m1 {
-    top: $gridUnit * 3;
-    left: $gridUnit * 2;
+  .diamond-second {
+    top: $gridUnit * 1;           //X
+    left: $gridUnit * 4;      //2X
   }
+  .diamond-third {
+    top: $gridUnit * 2.5;           //X
+    left: $gridUnit * 2.5;      //2X
+  }
+  .diamond-home {
+    top: $gridUnit * 4;           //X
+    left: $gridUnit * 4;      //2X
+  }
+
+
   .diamond-s2 {
-    top: $gridUnit * 3;
-    left: $gridUnit * 6;
-  }
-  .diamond-m2 {
-    top: 0;
-    left: $gridUnit * 6;
-  }
-  .diamond-l1 {
-    top: $gridUnit;
-    left: $gridUnit * 4;
-  }
-}
-.layout-2 {
-  .diamond-s1 {
-    top: $gridUnit;
-    left: $gridUnit * 6;
-  }
-  .diamond-s2 {
-    top: $gridUnit * 3;
-    left: $gridUnit * 2;
-  }
-  .diamond-m1 {
-    top: 0;
-    left: $gridUnit * 2;
-  }
-  .diamond-m2 {
     top: $gridUnit * 3;
     left: $gridUnit * 6;
   }
