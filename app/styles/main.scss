@@ -163,8 +163,39 @@ $large: $transformUnit * 4;
     -webkit-transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
       -ms-transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
         transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
-          }
+  }
 }
+
+
+.diamond-small2 {
+  background: white;
+  box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.2);
+  height: $small;
+  width: $small;
+  .diamond__content {
+    height: $small;
+    width: $small;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .diamond__img {
+    width: $gridUnit * 2;
+    -webkit-transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
+      -ms-transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
+        transform: rotate(-45deg) translateY(-$gridUnit * 0.4);
+  }
+}
+
+
+
+
+
+
+
 .diamond-large {
   background: green;
   height: $large;
@@ -201,6 +232,23 @@ $large: $transformUnit * 4;
   .diamond-home {
     top: $gridUnit * 4;           //X
     left: $gridUnit * 4;      //2X
+  }
+
+  .diamond-41 {
+    top: $gridUnit * 3.75;           //X
+    left: $gridUnit * 5.25;      //2X
+  }
+  .diamond-12 {
+    top: $gridUnit * 1.25;           //X
+    left: $gridUnit * 5.25;      //2X
+  }
+  .diamond-23 {
+    top: $gridUnit * 1.25;           //X
+    left: $gridUnit * 2.75;      //2X
+  }
+  .diamond-34 {
+    top: $gridUnit * 3.75;           //X
+    left: $gridUnit * 2.75;      //2X
   }
 
 
